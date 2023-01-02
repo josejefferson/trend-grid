@@ -11,7 +11,7 @@ This project allows you to create an animated trending grid similar to [Google T
 ## Example
 Put this code in your website
 ```html
-<iframe src="https://trend-grid.vercel.app/trends/" id="trends" frameborder="0"></iframe>
+<iframe src="https://trend-grid.vercel.app/trends/" id="trends" frameborder="0" style="width: 480px; height: 270px;" allowfullscreen></iframe>
 
 <script>
   const trends = document.getElementById('trends')
