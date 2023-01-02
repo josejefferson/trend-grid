@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trend Grid</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container my-3">
+      <h1 class="text-center mb-3">Trend Grid</h1>
+
+      <div class="row">
+        <div class="col col-12 col-md-6 col-lg-4 mb-3">
+          <form action="/trends">
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Amount of columns</div>
+              <input type="number" class="form-control" name="gridColumns" value="5" />
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Amount of rows</div>
+              <input type="number" class="form-control" name="gridRows" value="5" />
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Minimum block display time (seconds)</div>
+              <input type="number" class="form-control" name="minTime" value="5" />
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Maximum block display time (seconds)</div>
+              <input type="number" class="form-control" name="maxTime" value="15" />
+            </label>
+
+            <div class="form-label mt-2 fw-bold">Animations</div>
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="left" checked />
+              <span class="form-check-label">Slide left</span>
+            </label>
+
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="right" checked />
+              <span class="form-check-label">Slide right</span>
+            </label>
+
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="top" checked />
+              <span class="form-check-label">Slide up</span>
+            </label>
+
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="bottom" checked />
+              <span class="form-check-label">Slide down</span>
+            </label>
+
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="back" checked />
+              <span class="form-check-label">Flip</span>
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Refresh time (seconds)</div>
+              <input type="number" class="form-control" name="refreshTime" value="5" />
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Block colors</div>
+              <textarea class="form-control" name="colors" rows="10">
+#0d6efd
+#6610f2
+#6f42c1
+#d63384
+#dc3545
+#fd7e14
+#ffc107
+#198754
+#20c997
+#0dcaf0</textarea
+              >
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Maximum font size</div>
+              <input type="number" class="form-control" name="maxFontSize" value="32" />
+            </label>
+
+            <label class="d-block mt-2 fw-bold">
+              <div class="form-label">Data to display (optional)</div>
+              <textarea class="form-control" name="trends" rows="5"></textarea>
+            </label>
+
+            <div class="form-label mt-2 fw-bold">Other</div>
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="dontShrinkText" />
+              <span class="form-check-label">Don't shrink text</span>
+            </label>
+
+            <label class="d-block mt-2">
+              <input type="checkbox" class="form-check-input" name="allowUnsafeHTML" />
+              <span class="form-check-label">Allow unsafe HTML</span>
+            </label>
+          </form>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-8">
+          <div class="border rounded p-2">
+            <h3 class="text-center mb-3">Code</h3>
+            <code>
+              <pre>
+&lt;iframe src=&quot;<span class="url">/trends</span>&quot; id=&quot;trends&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+  const trends = document.getElementById('trends')
+
+  window.addEventListener('message', async ({ data }) =&gt; {
+    if (!Array.isArray(data)) return
+    const [command, content] = data
+    if (command !== 'fetch-trends') return
+    trends.contentWindow.postMessage(['data', await fetchData()], '*')
+  })
+
+  async function fetchData() {
+    // TODO: Implement this
+    // const data = await fetch('/api...').then((response) =&gt; response.json())
+    // return data
+    return ['Trends', 'Hello', 'World', '...']
+  }
+&lt;/script&gt;</pre>
+            </code>
+          </div>
+
+          <div class="text-center mt-2">
+            <a href="/trends" target="_blank" class="trends-anchor">
+              <button class="btn btn-primary btn-lg">Open in new tab</button>
+            </a>
+          </div>
+
+          <h3 class="text-center mt-3">Preview</h3>
+          <iframe
+            src="/trends"
+            class="w-100 mt-3"
+            style="height: 400px"
+            frameborder="0"
+            id="trends"
+          ></iframe>
+        </div>
+      </div>
+
+      <small class="d-block text-center">
+        Created by <a href="https://github.com/josejefferson/" target="_blank">Jefferson Dantas</a>
+      </small>
+    </div>
+
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
