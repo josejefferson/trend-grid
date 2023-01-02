@@ -2,11 +2,12 @@
 This project allows you to create an animated trending grid similar to [Google Trends](https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5).
 
 <a href="https://trend-grid.vercel.app/" target="_blank">
-  <div align="center">
     <img src="button.svg" alt="Click here to access" height="50"><br /><br />
-    <img src="demo.gif" alt="Demo">
-  </div>
 </a>
+
+## [Demo](https://trend-grid.vercel.app/trends/?trends=C%2CC%23%2CC%2B%2B%2CCoffeeScript%2CCSS%2CDart%2CDM%2CElixir%2CGo%2CGroovy%2CHTML%2CJava%2CJavaScript%2CKotlin%2CObjective-C%2CPerl%2CPHP%2CPowerShell%2CPython%2CRuby%2CRust%2CScala%2CShell%2CSwift%2CTypeScript)
+
+[![Demo](demo.gif)](https://trend-grid.vercel.app/trends/?trends=C%2CC%23%2CC%2B%2B%2CCoffeeScript%2CCSS%2CDart%2CDM%2CElixir%2CGo%2CGroovy%2CHTML%2CJava%2CJavaScript%2CKotlin%2CObjective-C%2CPerl%2CPHP%2CPowerShell%2CPython%2CRuby%2CRust%2CScala%2CShell%2CSwift%2CTypeScript)
 
 ## Example
 Put this code in your website
