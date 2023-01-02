@@ -1,9 +1,9 @@
 # Trend Grid
 This project allows you to create an animated trending grid similar to [Google Trends](https://trends.google.com/trends/hottrends/visualize?nrow=5&ncol=5).
 
-<a href="https://trend-grid.vercel.app/">
+<a href="https://trend-grid.vercel.app/" target="_blank">
   <div align="center">
-    <img src="button.svg" alt="Click here to access"><br /><br />
+    <img src="button.svg" alt="Click here to access" height="50"><br /><br />
     <img src="demo.gif" alt="Demo">
   </div>
 </a>
