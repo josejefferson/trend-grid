@@ -8,11 +8,17 @@ body {
 }
 
 .trends-grid {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), auto);
   grid-template-rows: repeat(var(--grid-rows), auto);
   height: 100%;
   width: 100%;
+}
+
+body.show-border .trends-grid {
+  border: transparent 4px solid;
+  gap: 4px;
 }
 
 .card {

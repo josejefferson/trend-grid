@@ -30,6 +30,7 @@ function generate() {
 
   if (form.elements.allowUnsafeHTML.checked) url.searchParams.set('allowUnsafeHTML', '1')
   if (form.elements.dontShrinkText.checked) url.searchParams.set('dontShrinkText', '1')
+  if (form.elements.showBorder.checked) url.searchParams.set('showBorder', '1')
   if (form.elements.colors.value !== COLORS)
     url.searchParams.set('colors', form.elements.colors.value.split('\n').join(','))
   if (form.elements.gridColumns.value !== '5')

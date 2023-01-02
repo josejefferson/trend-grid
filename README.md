@@ -49,5 +49,6 @@ https://trend-grid.vercel.app/trends/?trends=Example,Test
 `gridColumns` - Amount of grid columns
 `gridRows` - Amount of grid rows
 `refreshTime` - API data refresh time
+`showBorder` - Set to `1` to show borders on cards
 `dontShrinkText` - Set to `1` to disable font size shrink (may improve performance)
 `allowUnsafeHTML` - Allow unsafe HTML inside trends

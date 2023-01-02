@@ -36,6 +36,7 @@ const maxFontSize = params.get('maxFontSize')
 const gridColumns = params.get('gridColumns')
 const gridRows = params.get('gridRows')
 const refreshTime = params.get('refreshTime')
+const showBorder = params.get('showBorder')
 const dontShrinkText = params.get('dontShrinkText')
 const allowUnsafeHTML = params.get('allowUnsafeHTML')
 
@@ -46,6 +47,7 @@ if (minTime) options.minTime = Number(minTime)
 if (maxTime) options.maxTime = Number(maxTime)
 if (maxFontSize) options.maxFontSize = Number(maxFontSize)
 if (refreshTime) options.refreshTime = Number(refreshTime)
+if (showBorder) document.body.classList.add('show-border')
 if (dontShrinkText) options.dontShrinkText = true
 if (allowUnsafeHTML) options.allowUnsafeHTML = true
 if (gridColumns) {
@@ -56,5 +58,6 @@ if (gridRows) {
   options.gridRows = gridRows
   document.body.style.setProperty('--grid-rows', gridRows)
 }
+
 
 export default options
