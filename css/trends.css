@@ -1,7 +1,8 @@
 body {
   --grid-columns: 5;
   --grid-rows: 5;
-  background: black;
+  background-color: black;
+  cursor: none;
   height: 100vh;
   margin: 0;
 }
