@@ -5,9 +5,9 @@ This project allows you to create an animated trending grid similar to [Google T
     <img src="button.svg" alt="Click here to access" height="50"><br /><br />
 </a>
 
-## [Demo](https://trend-grid.vercel.app/trends/?trends=C%2CC%23%2CC%2B%2B%2CCoffeeScript%2CCSS%2CDart%2CDM%2CElixir%2CGo%2CGroovy%2CHTML%2CJava%2CJavaScript%2CKotlin%2CObjective-C%2CPerl%2CPHP%2CPowerShell%2CPython%2CRuby%2CRust%2CScala%2CShell%2CSwift%2CTypeScript)
+## [Demo](https://trend-grid.vercel.app/trends/?trends=C|C%23|C%2B%2B|CoffeeScript|CSS|Dart|DM|Elixir|Go|Groovy|HTML|Java|JavaScript|Kotlin|Objective-C|Perl|PHP|PowerShell|Python|Ruby|Rust|Scala|Shell|Swift|TypeScript)
 
-[![Demo](demo.gif)](https://trend-grid.vercel.app/trends/?trends=C%2CC%23%2CC%2B%2B%2CCoffeeScript%2CCSS%2CDart%2CDM%2CElixir%2CGo%2CGroovy%2CHTML%2CJava%2CJavaScript%2CKotlin%2CObjective-C%2CPerl%2CPHP%2CPowerShell%2CPython%2CRuby%2CRust%2CScala%2CShell%2CSwift%2CTypeScript)
+[![Demo](demo.gif)](https://trend-grid.vercel.app/trends/?trends=C|C%23|C%2B%2B|CoffeeScript|CSS|Dart|DM|Elixir|Go|Groovy|HTML|Java|JavaScript|Kotlin|Objective-C|Perl|PHP|PowerShell|Python|Ruby|Rust|Scala|Shell|Swift|TypeScript)
 
 ## Example
 Put this code in your website
@@ -36,7 +36,7 @@ Put this code in your website
 ## API
 ```
 https://trend-grid.vercel.app/trends/
-https://trend-grid.vercel.app/trends/?trends=Example,Test
+https://trend-grid.vercel.app/trends/?trends=Example|Test
 ```
 
 ### Params
