@@ -32,7 +32,7 @@ function generate() {
   if (form.elements.dontShrinkText.checked) url.searchParams.set('dontShrinkText', '1')
   if (form.elements.showBorder.checked) url.searchParams.set('showBorder', '1')
   if (form.elements.colors.value !== COLORS)
-    url.searchParams.set('colors', form.elements.colors.value.split('\n').join(','))
+    url.searchParams.set('colors', form.elements.colors.value.split('\n').join('|'))
   if (form.elements.gridColumns.value !== '5')
     url.searchParams.set('gridColumns', form.elements.gridColumns.value)
   if (form.elements.gridRows.value !== '5')
@@ -46,7 +46,7 @@ function generate() {
   if (form.elements.refreshTime.value !== '5')
     url.searchParams.set('refreshTime', Number(form.elements.refreshTime.value) * 1000)
   if (form.elements.trends.value !== '')
-    url.searchParams.set('trends', form.elements.trends.value.split('\n').join(','))
+    url.searchParams.set('trends', form.elements.trends.value.split('\n').join('|'))
 
   if (
     !form.elements.back.checked ||

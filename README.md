@@ -40,8 +40,8 @@ https://trend-grid.vercel.app/trends/?trends=Example,Test
 ```
 
 ### Params
-`trends` - Trends separated by comma
-`colors` - CSS colors separated by comma
+`trends` - Trends separated by `|`
+`colors` - CSS colors separated by `|`
 `animations` - Multiple of these: `left`, `right`, `top`, `bottom`, `back` (separated by comma)
 `minTime` - Minimum time the trend will displayed (milisseconds)
 `maxTime` - Maximum time the trend will displayed (milisseconds)
