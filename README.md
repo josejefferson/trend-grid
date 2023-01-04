@@ -41,14 +41,25 @@ https://trend-grid.vercel.app/trends/?trends=Example|Test
 
 ### Params
 `trends` - Trends separated by `|`
+
 `colors` - CSS colors separated by `|`
+
 `animations` - Multiple of these: `left`, `right`, `top`, `bottom`, `back` (separated by comma)
+
 `minTime` - Minimum time the trend will displayed (milisseconds)
+
 `maxTime` - Maximum time the trend will displayed (milisseconds)
+
 `maxFontSize` - Maximum font size of text
+
 `gridColumns` - Amount of grid columns
+
 `gridRows` - Amount of grid rows
+
 `refreshTime` - API data refresh time
+
 `showBorder` - Set to `1` to show borders on cards
+
 `dontShrinkText` - Set to `1` to disable font size shrink (may improve performance)
+
 `allowUnsafeHTML` - Allow unsafe HTML inside trends
