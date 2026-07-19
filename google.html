@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trend Grid</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <iframe
+      src="https://trend-grid.vercel.app/trends/"
+      id="trends"
+      frameborder="0"
+      style="width: 480px; height: 270px"
+      allowfullscreen
+    ></iframe>
+
+    <script>
+      const trends = document.getElementById('trends')
+
+      window.addEventListener('message', async ({ data }) => {
+        if (!Array.isArray(data)) return
+        const [command, content] = data
+        if (command !== 'fetch-trends') return
+        trends.contentWindow.postMessage(['data', await fetchData()], '*')
+      })
+
+      async function fetchData() {
+        // TODO: Implement this
+        // const data = await fetch('/api...').then((response) => response.json())
+        // return data
+        await fetch('https://trends.google.com/trending/rss?geo=BR')
+        return ['Trends', 'Hello', 'World', '...']
+      }
+    </script>
+
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
